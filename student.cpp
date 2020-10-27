@@ -11,5 +11,5 @@ student::student(const char* newname, int newid, float newgpa){
 }
 student::~student(){
   //destructor
-  //delete name; 
+  delete name; 
 }

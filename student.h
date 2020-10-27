@@ -7,7 +7,7 @@
 using namespace std;
 
 class student{
- public:
+public:
   student(const char*, int, float);
   ~student();
   char* name = new char[80];

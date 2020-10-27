@@ -6,11 +6,22 @@
 using namespace std;
 
 node::node(student* newstudent, node* newnode){
-  student = newstudent;
+  stud = newstudent;
   linkNode = newnode;
 }
 node::~node(){
-  delete &student;
-  //rest of delete function
-  //maybe if/else, set new next? 
+  delete stud;
+  linkNode = NULL;
+}
+node* node::getNext(){
+  return linkNode;
+}
+void node::setNext(node* newnode){
+  linkNode = newnode; 
+}
+student* node::getStudent(){
+  return stud;
+}
+void node::setStudent(student* newstudent){
+  stud = newstudent; 
 }
